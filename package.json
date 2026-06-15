@@ -6,6 +6,11 @@
   "description": "Collection of handy online tools for developers, with great UX. ",
   "author": "Corentin Th <corentin.thomasset74+it-tools@gmail.com> (https://corentin.tech)",
   "license": "GNU GPLv3",
+  "pnpm": {
+    "overrides": {
+      "@vueuse/shared": "10.11.1"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/CorentinTh/it-tools"
@@ -23,7 +28,9 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && NODE_OPTIONS=--max_old_space_size=4096 vite build",
+    "build": "vue-tsc --noEmit && NODE_OPTIONS=--max_old_space_size=4096 vite build && node scripts/prerender.mjs",
+    "build:only": "vue-tsc --noEmit && NODE_OPTIONS=--max_old_space_size=4096 vite build",
+    "prerender": "node scripts/prerender.mjs",
     "preview": "vite preview --port 5050",
     "test": "npm run test:unit",
     "test:unit": "vitest --environment jsdom",
@@ -137,6 +144,7 @@
     "jsdom": "^22.0.0",
     "less": "^4.1.3",
     "prettier": "^3.0.0",
+    "puppeteer": "^25.1.0",
     "typescript": "~5.2.0",
     "unocss": "^0.65.1",
     "unocss-preset-scrollbar": "^0.2.1",
