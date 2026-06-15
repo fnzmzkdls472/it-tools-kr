@@ -10,7 +10,7 @@ import type { Tool } from '@/tools/tools.types';
 const route = useRoute();
 
 const head = computed<HeadObject>(() => ({
-  title: `${route.meta.name} - IT Tools`,
+  title: `${route.meta.name} | 무료 온라인 도구`,
   meta: [
     {
       name: 'description',
@@ -19,6 +19,24 @@ const head = computed<HeadObject>(() => ({
     {
       name: 'keywords',
       content: ((route.meta.keywords ?? []) as string[]).join(','),
+    },
+    {
+      property: 'og:title',
+      content: `${route.meta.name} | 무료 온라인 도구`,
+    },
+    {
+      property: 'og:description',
+      content: route.meta?.description as string,
+    },
+    {
+      property: 'og:url',
+      content: `https://too-liz.com${route.path}`,
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://too-liz.com${route.path}`,
     },
   ],
 }));

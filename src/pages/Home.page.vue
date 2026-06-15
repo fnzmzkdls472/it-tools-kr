@@ -10,7 +10,10 @@ import { config } from '@/config';
 
 const toolStore = useToolStore();
 
-useHead({ title: 'IT Tools - Handy online tools for developers' });
+useHead({
+  title: '무료 온라인 도구 모음 | 사업자등록번호·부가세 계산기·개발자 유틸',
+  link: [{ rel: 'canonical', href: 'https://too-liz.com/' }],
+});
 const { t } = useI18n();
 
 const favoriteTools = computed(() => toolStore.favoriteTools);
