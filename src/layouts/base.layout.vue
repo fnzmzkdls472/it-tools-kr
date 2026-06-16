@@ -58,6 +58,15 @@ const tools = computed<ToolCategory[]>(() => [
         <CollapsibleToolMenu :tools-by-category="tools" />
 
         <div class="footer">
+          <div class="links">
+            <RouterLink to="/privacy">
+              개인정보처리방침
+            </RouterLink>
+            ·
+            <RouterLink to="/about">
+              소개
+            </RouterLink>
+          </div>
           <div>
             © {{ new Date().getFullYear() }} too-liz
           </div>
@@ -125,6 +134,20 @@ const tools = computed<ToolCategory[]>(() => [
   color: #838587;
   margin-top: 20px;
   padding: 20px 0;
+
+  .links {
+    font-size: 13px;
+    margin-bottom: 8px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
   .credit {
     font-size: 12px;

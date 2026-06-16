@@ -14,7 +14,7 @@ if (!existsSync(distDir)) {
 }
 
 // 1. 프리렌더할 라우트 수집 (홈 + about + 모든 도구)
-const routes = ['/', '/about'];
+const routes = ['/', '/about', '/privacy'];
 for (const entry of await readdir(toolsDir, { withFileTypes: true })) {
   if (!entry.isDirectory()) {
     continue;

@@ -28,7 +28,7 @@ for (const entry of entries) {
   }
 }
 
-const staticPaths = ['/', '/about'];
+const staticPaths = ['/', '/about', '/privacy'];
 const allPaths = [...staticPaths, ...toolPaths.sort()];
 const today = new Date().toISOString().split('T')[0];
 
