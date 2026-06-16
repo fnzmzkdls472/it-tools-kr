@@ -3,6 +3,7 @@ import { tool as koreanVatCalculator } from './korean-vat-calculator';
 import { tool as koreanRrnValidator } from './korean-rrn-validator';
 import { tool as koreanAgeCalculator } from './korean-age-calculator';
 import { tool as koreanDdayCalculator } from './korean-dday-calculator';
+import { tool as koreanSalaryCalculator } from './korean-salary-calculator';
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
@@ -173,7 +174,7 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Math',
-    components: [mathEvaluator, etaCalculator, percentageCalculator, koreanVatCalculator, koreanAgeCalculator, koreanDdayCalculator],
+    components: [mathEvaluator, etaCalculator, percentageCalculator, koreanVatCalculator, koreanAgeCalculator, koreanDdayCalculator, koreanSalaryCalculator],
   },
   {
     name: 'Measurement',
