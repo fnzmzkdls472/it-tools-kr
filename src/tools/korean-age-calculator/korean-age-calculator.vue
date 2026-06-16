@@ -31,6 +31,26 @@ const result = computed<CKeyValueListItems>(() => {
     { label: '태어난 지', value: `${r.daysAlive.toLocaleString('ko-KR')}일`, showCopyButton: false },
   ];
 });
+
+const description = `
+## 만 나이 계산기
+
+2023년 6월 28일부터 법적·행정상 나이가 '만 나이'로 통일되었습니다. 이 계산기는 생년월일로 만 나이를 비롯해 연 나이, 세는 나이, 띠, 다음 생일까지 남은 날을 한 번에 알려줍니다.
+
+## 만 나이 계산법
+
+- **만 나이** = 올해 연도 − 출생 연도. 단, 올해 생일이 아직 지나지 않았으면 1을 뺍니다.
+- **연 나이** = 올해 연도 − 출생 연도 (생일과 무관).
+- **세는 나이(옛 한국식)** = 올해 연도 − 출생 연도 + 1.
+
+## 사용 방법
+
+생년월일을 입력하면 모든 나이와 띠가 자동으로 계산됩니다. (예: 1990-01-01)
+
+## 자주 묻는 질문
+
+**어떤 나이를 써야 하나요?** 2023년 6월부터는 법령·계약·문서에서 별도 표기가 없으면 모두 만 나이를 사용합니다.
+`;
 </script>
 
 <template>
@@ -48,5 +68,7 @@ const result = computed<CKeyValueListItems>(() => {
     <c-alert type="warning" mt-5>
       2023년 6월부터 법적·행정상 나이가 <b>만 나이</b>로 통일되었습니다. 별도 표기가 없으면 만 나이를 사용하세요.
     </c-alert>
+
+    <c-markdown :markdown="description" mt-8 />
   </div>
 </template>

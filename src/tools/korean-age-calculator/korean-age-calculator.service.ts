@@ -1,12 +1,12 @@
 const ZODIAC = ['쥐', '소', '호랑이', '토끼', '용', '뱀', '말', '양', '원숭이', '닭', '개', '돼지'];
 
 export interface AgeResult {
-  internationalAge: number; // 만 나이
-  countingAge: number; // 세는 나이 (참고)
-  yearAge: number; // 연 나이
-  zodiac: string; // 띠
-  daysUntilBirthday: number; // 다음 생일까지 남은 일수
-  daysAlive: number; // 태어난 지 며칠
+  internationalAge: number // 만 나이
+  countingAge: number // 세는 나이 (참고)
+  yearAge: number // 연 나이
+  zodiac: string // 띠
+  daysUntilBirthday: number // 다음 생일까지 남은 일수
+  daysAlive: number // 태어난 지 며칠
 }
 
 export function parseDate(raw: string): Date | null {

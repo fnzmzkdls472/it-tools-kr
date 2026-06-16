@@ -1,9 +1,9 @@
 const VAT_RATE = 0.1;
 
 export interface VatResult {
-  supply: number; // 공급가액
-  vat: number; // 부가세
-  total: number; // 합계금액 (공급가액 + 부가세)
+  supply: number // 공급가액
+  vat: number // 부가세
+  total: number // 합계금액 (공급가액 + 부가세)
 }
 
 export function parseAmount(raw: string): number {

@@ -1,5 +1,5 @@
-import CashMultiple from '~icons/mdi/cash-multiple';
 import { defineTool } from '../tool';
+import CashMultiple from '~icons/mdi/cash-multiple';
 
 export const tool = defineTool({
   name: '연봉 실수령액 계산기',

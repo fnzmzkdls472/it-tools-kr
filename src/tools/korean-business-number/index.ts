@@ -1,5 +1,5 @@
-import OfficeBuilding from '~icons/mdi/office-building';
 import { defineTool } from '../tool';
+import OfficeBuilding from '~icons/mdi/office-building';
 
 export const tool = defineTool({
   name: '사업자등록번호 검증',

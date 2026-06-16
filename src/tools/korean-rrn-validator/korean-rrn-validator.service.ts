@@ -1,22 +1,22 @@
 const CHECK_WEIGHTS = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5];
 
 interface GenderCenturyInfo {
-  century: number;
-  gender: string;
-  foreigner: boolean;
+  century: number
+  gender: string
+  foreigner: boolean
 }
 
 const GENDER_CODE_MAP: Record<string, GenderCenturyInfo> = {
-  '0': { century: 1800, gender: '여성', foreigner: false },
-  '9': { century: 1800, gender: '남성', foreigner: false },
-  '1': { century: 1900, gender: '남성', foreigner: false },
-  '2': { century: 1900, gender: '여성', foreigner: false },
-  '3': { century: 2000, gender: '남성', foreigner: false },
-  '4': { century: 2000, gender: '여성', foreigner: false },
-  '5': { century: 1900, gender: '남성', foreigner: true },
-  '6': { century: 1900, gender: '여성', foreigner: true },
-  '7': { century: 2000, gender: '남성', foreigner: true },
-  '8': { century: 2000, gender: '여성', foreigner: true },
+  0: { century: 1800, gender: '여성', foreigner: false },
+  9: { century: 1800, gender: '남성', foreigner: false },
+  1: { century: 1900, gender: '남성', foreigner: false },
+  2: { century: 1900, gender: '여성', foreigner: false },
+  3: { century: 2000, gender: '남성', foreigner: false },
+  4: { century: 2000, gender: '여성', foreigner: false },
+  5: { century: 1900, gender: '남성', foreigner: true },
+  6: { century: 1900, gender: '여성', foreigner: true },
+  7: { century: 2000, gender: '남성', foreigner: true },
+  8: { century: 2000, gender: '여성', foreigner: true },
 };
 
 export function getDigits(raw: string): string {
@@ -29,11 +29,11 @@ export function formatRrn(raw: string): string {
 }
 
 export interface RrnInfo {
-  birthDate?: string;
-  age?: number;
-  gender?: string;
-  foreigner?: boolean;
-  checksumValid: boolean;
+  birthDate?: string
+  age?: number
+  gender?: string
+  foreigner?: boolean
+  checksumValid: boolean
 }
 
 function parseBirthDate(digits: string): { iso: string; date: Date } | null {

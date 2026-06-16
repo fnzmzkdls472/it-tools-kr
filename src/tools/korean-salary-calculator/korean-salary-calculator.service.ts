@@ -79,23 +79,23 @@ function earnedIncomeTaxCredit(calcTax: number, grossForTax: number): number {
 
 export interface SalaryResult {
   // 월 기준
-  monthlyGross: number;
-  nationalPension: number;
-  healthInsurance: number;
-  longTermCare: number;
-  employmentInsurance: number;
-  incomeTax: number;
-  localTax: number;
-  totalDeduction: number;
-  netMonthly: number;
+  monthlyGross: number
+  nationalPension: number
+  healthInsurance: number
+  longTermCare: number
+  employmentInsurance: number
+  incomeTax: number
+  localTax: number
+  totalDeduction: number
+  netMonthly: number
   // 연 기준
-  netAnnual: number;
+  netAnnual: number
 }
 
 export interface SalaryInput {
-  annualSalary: number; // 연봉 (원)
-  monthlyNonTax: number; // 월 비과세액 (원, 식대 등)
-  dependents: number; // 공제대상 가족 수 (본인 포함)
+  annualSalary: number // 연봉 (원)
+  monthlyNonTax: number // 월 비과세액 (원, 식대 등)
+  dependents: number // 공제대상 가족 수 (본인 포함)
 }
 
 export function calculateSalary({ annualSalary, monthlyNonTax, dependents }: SalaryInput): SalaryResult | null {

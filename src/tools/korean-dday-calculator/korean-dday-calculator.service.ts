@@ -24,8 +24,8 @@ function diffInDays(from: Date, to: Date): number {
 }
 
 export interface DdayResult {
-  label: string; // D-7, D-Day, D+3
-  daysFromToday: number;
+  label: string // D-7, D-Day, D+3
+  daysFromToday: number
 }
 
 export function calcDday(target: Date, today: Date = new Date()): DdayResult {
@@ -44,8 +44,8 @@ export function calcDday(target: Date, today: Date = new Date()): DdayResult {
 }
 
 export interface BetweenResult {
-  exclusive: number; // 끝 - 시작 (사이 일수)
-  inclusive: number; // 양 끝 포함
+  exclusive: number // 끝 - 시작 (사이 일수)
+  inclusive: number // 양 끝 포함
 }
 
 export function calcBetween(start: Date, end: Date): BetweenResult {

@@ -1,5 +1,5 @@
-import CardAccountDetails from '~icons/mdi/card-account-details';
 import { defineTool } from '../tool';
+import CardAccountDetails from '~icons/mdi/card-account-details';
 
 export const tool = defineTool({
   name: '주민등록번호 검증',
