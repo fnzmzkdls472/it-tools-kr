@@ -6,6 +6,7 @@ export const lightThemeOverrides: GlobalThemeOverrides = {
     primaryColorHover: '#6366f1FF',
     primaryColorPressed: '#4338caFF',
     primaryColorSuppl: '#6366f1FF',
+    fontFamily: '"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif',
   },
 
   Menu: {
@@ -27,6 +28,7 @@ export const darkThemeOverrides: GlobalThemeOverrides = {
     primaryColorHover: '#818cf8FF',
     primaryColorPressed: '#4f46e5FF',
     primaryColorSuppl: '#818cf8FF',
+    fontFamily: '"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif',
   },
 
   Notification: {
