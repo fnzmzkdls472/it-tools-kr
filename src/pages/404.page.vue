@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head';
 
-useHead({ title: 'Page not found - IT Tools' });
+useHead({ title: '페이지를 찾을 수 없음 | too-liz' });
 </script>
 
 <template>

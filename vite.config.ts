@@ -57,13 +57,13 @@ export default defineConfig({
       registerType: 'autoUpdate',
       strategies: 'generateSW',
       manifest: {
-        name: 'IT Tools',
-        description: 'Aggregated set of useful tools for developers.',
+        name: 'too-liz',
+        description: '실무자와 개발자를 위한 무료 온라인 도구 모음',
         display: 'standalone',
-        lang: 'fr-FR',
+        lang: 'ko-KR',
         start_url: `${baseUrl}?utm_source=pwa&utm_medium=pwa`,
         orientation: 'any',
-        theme_color: '#18a058',
+        theme_color: '#6366f1',
         background_color: '#f1f5f9',
         icons: [
           {

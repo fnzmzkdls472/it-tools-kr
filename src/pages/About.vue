@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head';
 
-useHead({ title: 'About - IT Tools' });
+useHead({ title: '소개 | too-liz' });
 </script>
 
 <template>
