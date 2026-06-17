@@ -1,11 +1,10 @@
 <script lang="ts" setup>
-import { NIcon, useThemeVars } from 'naive-ui';
+import { NIcon } from 'naive-ui';
 
 import { RouterLink } from 'vue-router';
 import { Home2, Menu2 } from '@vicons/tabler';
 
 import { storeToRefs } from 'pinia';
-import HeroGradient from '../assets/hero-gradient.svg?component';
 import MenuLayout from '../components/MenuLayout.vue';
 import NavbarButtons from '../components/NavbarButtons.vue';
 import { useStyleStore } from '@/stores/style.store';
@@ -14,7 +13,6 @@ import type { ToolCategory } from '@/tools/tools.types';
 import { useToolStore } from '@/tools/tools.store';
 import CollapsibleToolMenu from '@/components/CollapsibleToolMenu.vue';
 
-const themeVars = useThemeVars();
 const styleStore = useStyleStore();
 
 const { t } = useI18n();
@@ -31,14 +29,15 @@ const tools = computed<ToolCategory[]>(() => [
 <template>
   <MenuLayout class="menu-layout" :class="{ isSmallScreen: styleStore.isSmallScreen }">
     <template #sider>
-      <RouterLink to="/" class="hero-wrapper">
-        <HeroGradient class="gradient" />
-        <div class="text-wrapper">
-          <div class="title">
+      <RouterLink to="/" class="brand-header">
+        <div class="brand-mark">
+          t
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">
             too-liz
           </div>
-          <div class="divider" />
-          <div class="subtitle">
+          <div class="brand-tagline">
             {{ $t('home.subtitle') }}
           </div>
         </div>
@@ -155,46 +154,53 @@ const tools = computed<ToolCategory[]>(() => [
 }
 
 .sider-content {
-  padding-top: 160px;
-  padding-bottom: 200px;
+  padding-top: 8px;
+  padding-bottom: 120px;
 }
 
-.hero-wrapper {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  overflow: hidden;
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 18px 18px 16px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.16);
 
-  .gradient {
-    margin-top: -65px;
+  .brand-mark {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #818cf8 0%, #4f46e5 100%);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.35);
   }
 
-  .text-wrapper {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    top: 16px;
-    color: #fff;
+  .brand-text {
+    line-height: 1.25;
+    overflow: hidden;
+  }
 
-    .title {
-      font-size: 25px;
-      font-weight: 600;
-    }
+  .brand-name {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
 
-    .divider {
-      width: 50px;
-      height: 2px;
-      border-radius: 4px;
-      background-color: v-bind('themeVars.primaryColor');
-      margin: 0 auto 5px;
-    }
-
-    .subtitle {
-      font-size: 16px;
-    }
+  .brand-tagline {
+    font-size: 11px;
+    opacity: 0.55;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 </style>
