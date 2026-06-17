@@ -13,6 +13,19 @@ const toolStore = useToolStore();
 useHead({
   title: '무료 온라인 도구 모음 | 사업자등록번호·부가세 계산기·개발자 유틸',
   link: [{ rel: 'canonical', href: 'https://too-liz.com/' }],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        'name': 'too-liz',
+        'url': 'https://too-liz.com/',
+        'inLanguage': 'ko',
+        'description': '사업자등록번호 검증, 부가가치세 계산, 주민등록번호 검증, 만 나이·연봉 실수령액 계산 등 개발자와 실무자를 위한 무료 온라인 도구 모음.',
+      }),
+    },
+  ],
 });
 const { t } = useI18n();
 

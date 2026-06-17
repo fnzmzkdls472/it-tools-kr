@@ -39,6 +39,23 @@ const head = computed<HeadObject>(() => ({
       href: `https://too-liz.com${route.path}`,
     },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        'name': route.meta.name,
+        'description': route.meta?.description,
+        'url': `https://too-liz.com${route.path}`,
+        'applicationCategory': 'UtilitiesApplication',
+        'operatingSystem': 'All (web browser)',
+        'inLanguage': 'ko',
+        'isAccessibleForFree': true,
+        'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'KRW' },
+      }),
+    },
+  ],
 }));
 useHead(head);
 const { t } = useI18n();
