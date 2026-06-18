@@ -4,6 +4,7 @@ import { tool as koreanRrnValidator } from './korean-rrn-validator';
 import { tool as koreanAgeCalculator } from './korean-age-calculator';
 import { tool as koreanDdayCalculator } from './korean-dday-calculator';
 import { tool as koreanSalaryCalculator } from './korean-salary-calculator';
+import { tool as imageToPdf } from './image-to-pdf';
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
@@ -147,7 +148,7 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Images and videos',
-    components: [qrCodeGenerator, wifiQrCodeGenerator, svgPlaceholderGenerator, cameraRecorder],
+    components: [imageToPdf, qrCodeGenerator, wifiQrCodeGenerator, svgPlaceholderGenerator, cameraRecorder],
   },
   {
     name: 'Development',
