@@ -184,6 +184,7 @@ declare module '@vue/runtime-core' {
     NTable: typeof import('naive-ui')['NTable']
     NTag: typeof import('naive-ui')['NTag']
     NumeronymGenerator: typeof import('./src/tools/numeronym-generator/numeronym-generator.vue')['default']
+    OracleDateDecoder: typeof import('./src/tools/oracle-date-decoder/oracle-date-decoder.vue')['default']
     OracleNumberDecoder: typeof import('./src/tools/oracle-number-decoder/oracle-number-decoder.vue')['default']
     OtpCodeGeneratorAndValidator: typeof import('./src/tools/otp-code-generator-and-validator/otp-code-generator-and-validator.vue')['default']
     PasswordStrengthAnalyser: typeof import('./src/tools/password-strength-analyser/password-strength-analyser.vue')['default']

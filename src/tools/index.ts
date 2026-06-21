@@ -7,6 +7,7 @@ import { tool as koreanSalaryCalculator } from './korean-salary-calculator';
 import { tool as imageToPdf } from './image-to-pdf';
 import { tool as textToHex } from './text-to-hex';
 import { tool as oracleNumberDecoder } from './oracle-number-decoder';
+import { tool as oracleDateDecoder } from './oracle-date-decoder';
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
@@ -164,6 +165,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsonToCsv,
       sqlPrettify,
       oracleNumberDecoder,
+      oracleDateDecoder,
       chmodCalculator,
       dockerRunToDockerComposeConverter,
       xmlFormatter,
